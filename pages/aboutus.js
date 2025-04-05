@@ -7,6 +7,8 @@ import { Brand } from "../components/componentsindex";
 import images from "../img";
 import ekanshImg from "../img/ekansh.png";
 import mohitImg  from "../img/mohit.jpg";
+import krishImg from "../img/krish.jpg";
+import faeezImg from "../img/faeez.jpg";
 
 const aboutus = () => {
   const founderArray = [
@@ -23,12 +25,12 @@ const aboutus = () => {
     {
       name: "Faeez Ahmed",
       position: "UI/UX Designer",
-      images: images.founder3,
+      images: faeezImg,
     },
     {
       name: "Krish Bansal",
       position: "Backend Developer",
-      images: images.founder4,
+      images: krishImg,
     },
   ];
 
