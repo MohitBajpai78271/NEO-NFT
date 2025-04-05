@@ -126,9 +126,6 @@ const SideBar = ({ setOpenSideMenu, currentAccount, connectWallet }) => {
         </p>
         <div className={Style.sideBar_social}>
           <a href="#">
-            <TiSocialFacebook />
-          </a>
-          <a href="#">
             <TiSocialLinkedin />
           </a>
           <a href="#">

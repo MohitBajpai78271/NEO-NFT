@@ -26,9 +26,7 @@ const collectionProfile = () => {
           />
 
           <div className={Style.collectionProfile_box_left_social}>
-            <a href="#">
-              <TiSocialFacebook />
-            </a>
+
             <a href="#">
               <TiSocialInstagram />
             </a>
@@ -44,8 +42,8 @@ const collectionProfile = () => {
         <div className={Style.collectionProfile_box_middle}>
           <h1>Awesome NFTs Collection</h1>
           <p>
-            Karafuru is home to 5,555 generative arts where colors reign
-            supreme. Leave the drab reality and enter the world of Karafuru by
+            NeoNFT is home to many generative arts where colors reign
+            supreme. Leave the drab reality and enter the world of NeoNFT by
             Museum of Toys.
           </p>
 
