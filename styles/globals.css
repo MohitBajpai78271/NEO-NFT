@@ -39,17 +39,17 @@
 /* //THEME 2 */
 :root {
   --icons-color: #ffffff;
-  --icons-light-color: #ffdf2b57;
-  --icons-bg-color: #ffdf2b;
+  --icons-light-color: #6FFDFF;
+  --icons-bg-color: #6FFDFF;
   --shadow-dark-color: #555557;
   --bg-shadow-dark-color: #555557;
   --shadow-light-color: #232325;
   --main-bg-color: #141414;
   --overlay: #2323255e;
 
-  --box-shadow: 1px 1px 2px #ffdf2b, -1px -1px 2px #ffdf2b;
+  --box-shadow: 1px 1px 2px #6FFDFF, -1px -1px 2px #6FFDFF;
 
-  --box-shadow-2: 1px 1px 2px #ffdf2b, -1px -1px 2px #ffdf2b;
+  --box-shadow-2: 1px 1px 2px #6FFDFF, -1px -1px 2px #6FFDFF;
 }
 
 /* //THEME 3 */
