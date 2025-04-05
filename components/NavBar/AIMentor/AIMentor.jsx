@@ -54,7 +54,7 @@ const AIMentor = () => {
 
   return (
     <div className={styles.chatContainer}>
-      <div className={styles.chatHeader}>AI Mentor 💬</div>
+      <div className={styles.chatHeader}>BlockBuddy 💬</div>
       <div className={styles.chatBody}>
         {messages.map((msg, idx) => (
           <div
