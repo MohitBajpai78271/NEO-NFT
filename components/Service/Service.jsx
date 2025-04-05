@@ -20,8 +20,7 @@ const Service = () => {
           </p>
           <h3>Filter & Discover</h3>
           <p>
-            Connect with wallet, discover, buy NTFs, sell your NFTs and earn
-            money
+          Browse trending NFTs and collections, and filter by category, price, and more.
           </p>
         </div>
         <div className={Style.service_box_item}>
@@ -32,12 +31,11 @@ const Service = () => {
             height={100}
           />
           <p className={Style.service_box_item_step}>
-            <span>Step 1</span>
+            <span>Step 2</span>
           </p>
-          <h3>Filter & Discover</h3>
+          <h3>Connect Wallet</h3>
           <p>
-            Connect with wallet, discover, buy NTFs, sell your NFTs and earn
-            money
+          Connect your crypto wallet to the platform to manage your NFTs and transactions.
           </p>
         </div>
         <div className={Style.service_box_item}>
@@ -48,12 +46,11 @@ const Service = () => {
             height={100}
           />
           <p className={Style.service_box_item_step}>
-            <span>Step 1</span>
+            <span>Step 3</span>
           </p>
-          <h3>Connect Wallet</h3>
+          <h3>Buy, Sell & Earn</h3>
           <p>
-            Connect with wallet, discover, buy NTFs, sell your NFTs and earn
-            money
+          Buy NFTs with your preferred crypto currency, sell your NFTs, and earn rewards.
           </p>
         </div>
         <div className={Style.service_box_item}>
@@ -64,12 +61,11 @@ const Service = () => {
             height={100}
           />
           <p className={Style.service_box_item_step}>
-            <span>Step 1</span>
+            <span>Step 4</span>
           </p>
-          <h3>Start trading</h3>
+          <h3>tart Trading & Growing</h3>
           <p>
-            Connect with wallet, discover, buy NTFs, sell your NFTs and earn
-            money
+          Join NFT communities and showcase your assets. Trade with other users and grow your collection.
           </p>
         </div>
       </div>
