@@ -29,15 +29,15 @@
     flex: 1;
   }
 
-/* .logo{
+.logo{
   color: var(--icons-color);
   font-size: 4rem;
-} */
-.logo {
+}
+/* .logo {
     color: var(--icons-color);
     font-size: 4rem;
     cursor: pointer;
-  }
+  } */
 
 .navbar_container_left_box_input_box{
     width: 170%;
@@ -69,11 +69,11 @@
     flex-wrap: nowrap;
   }
 /* Common styles for all right items */
-.navbar_container_right > * {
+/* .navbar_container_right > * {
     position: relative;
     display: flex;
     align-items: center;
-  }
+  } */
   
 
 .navbar_container_right_discover{
