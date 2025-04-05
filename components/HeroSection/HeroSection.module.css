@@ -3,6 +3,11 @@
     width: 80%;
     margin: 3rem auto;
 }
+.h1_druve {
+    font-weight: bold; 
+    text-shadow: 2px 2px 6px black;
+}
+
 
 .heroSection_box{
     display: grid;
@@ -44,3 +49,86 @@
         font-size: 3rem;
     }
 }
+
+.heroSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 0rem;
+    background-color: #1e1e1e;
+  }
+  
+  .heroSection_box_right {
+    background-image: url("https://images.unsplash.com/photo-1626428091984-48f9ffbf927c?q=80&w=3033&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    padding: 10rem 8rem;
+    text-align: center;
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    background-color: black;
+  }
+  
+  .heroContent {
+    color: white;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .heroContent h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .divider {
+    border: 1px solid white;
+    width: 80%;
+    margin: 0 auto 2rem auto;
+    font-weight: bold; 
+    text-shadow: 2px 2px 6px black;
+  }
+  
+  .heroButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .heroButtons button {
+    font-weight: bold; /* Bold text */
+    text-shadow: 1px 1px 2px black; /* Text shadow for emphasis */
+    border: none; /* Optional: cleaner look */
+    padding: 0.5rem 1rem; /* Optional: some padding */
+    border-radius: 0.5rem; /* Optional: rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  
+  .exploreBtn,
+  .blogBtn {
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .exploreBtn:hover,
+  .blogBtn:hover {
+    background-color: white;
+    color: #111;
+  }
+  
+  .highlight {
+    color: #ffb800;
+  }
+  

@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { DiJqueryLogo } from "react-icons/di";
+import FinalLogo from "../../img/FinalLogo.png"
 import { MdNotifications } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 import { CgMenuRight } from "react-icons/cg";
@@ -79,9 +80,16 @@ const NavBar = () => {
       <div className={Style.navbar_container}>
         {/* LEFT SECTION */}
         <div className={Style.navbar_container_left}>
-          <div className={Style.logo}>
-            <DiJqueryLogo onClick={() => router.push("/")} />
+          <div className={Style.logo} onClick={() => router.push("/")}>
+            <Image
+              src={FinalLogo}
+              alt="Logo"
+              width={60}
+              height={50}
+              className={Style.logoImage}
+            />
           </div>
+
           <div className={Style.navbar_container_left_box_input}>
             <div className={Style.navbar_container_left_box_input_box}>
               <input type="text" placeholder="Search NFT" />
