@@ -5,27 +5,29 @@ import Image from "next/image";
 import Style from "../styles/aboutus.module.css";
 import { Brand } from "../components/componentsindex";
 import images from "../img";
+import ekanshImg from "../img/ekansh.png";
+import mohitImg  from "../img/mohit.jpg";
 
 const aboutus = () => {
   const founderArray = [
     {
-      name: "Niamh O'Shea",
-      position: "Co-founder and Chief Executive",
-      images: images.founder1,
+      name: "Ekansh",
+      position: "Team Leader",
+      images: ekanshImg,
     },
     {
-      name: "Danien Jame",
-      position: "Co-founder and Chief Executive",
-      images: images.founder2,
+      name: "Mohit Bajpai",
+      position: "Fronted Developer",
+      images: mohitImg,
     },
     {
-      name: "Orla Dwyer",
-      position: "Co-founder, Chairman",
+      name: "Faeez Ahmed",
+      position: "UI/UX Designer",
       images: images.founder3,
     },
     {
-      name: "Dara Frazier",
-      position: "Co-Founder, Chief Strategy Officer",
+      name: "Krish Bansal",
+      position: "Backend Developer",
       images: images.founder4,
     },
   ];
