@@ -12,34 +12,56 @@ const AudioCard = () => {
   const [like, setLike] = useState(false);
   const [play, setPlay] = useState(false);
 
-  const likeNft = () => {
-    if (!like) {
-      setLike(true);
-    } else {
-      setLike(false);
-    }
-  };
+  const [time, setTime] = useState({
+    hours: 3,
+    minutes: 15,
+    seconds: 20,
+  });
 
-  const playMusic = () => {
-    if (!play) {
-      setPlay(true);
-    } else {
-      setPlay(false);
-    }
-  };
+  const likeNft = () => setLike(!like);
+  const playMusic = () => setPlay(!play);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime((prevTime) => {
+        let { hours, minutes, seconds } = prevTime;
+
+        if (hours === 0 && minutes === 0 && seconds === 0) {
+          clearInterval(timer);
+          return prevTime; // Stop at 0
+        }
+
+        if (seconds > 0) {
+          seconds--;
+        } else {
+          seconds = 59;
+          if (minutes > 0) {
+            minutes--;
+          } else {
+            minutes = 59;
+            if (hours > 0) {
+              hours--;
+            }
+          }
+        }
+
+        return { hours, minutes, seconds };
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className={Style.audioCard}>
       <div className={Style.audioCard_box}>
         <div className={Style.audioCard_box_like_time}>
-          <div className={Style.audioCard_box_like} onClick={() => likeNft()}>
+          <div className={Style.audioCard_box_like} onClick={likeNft}>
             {like ? (
               <AiFillHeart className={Style.audioCard_box_like_icon} />
             ) : (
-              <AiOutlineHeart
-                className={Style.audioCard_box_like_icon_unlike}
-              />
+              <AiOutlineHeart className={Style.audioCard_box_like_icon_unlike} />
             )}
-
             <span>24</span>
           </div>
 
@@ -52,20 +74,14 @@ const AudioCard = () => {
         </div>
 
         <div className={Style.audioCard_box_player}>
-          <Image src={images.musiceWave} alt="musice" width={200} />
+          <Image src={images.musiceWave} alt="music" width={200} />
           <div
             className={Style.audioCard_box_musicPlayer}
-            onClick={() => playMusic()}
+            onClick={playMusic}
           >
-            {play ? (
-              <div className={Style.audioCard_box_musicPlayer_icon}>
-                <TbPlayerPause />
-              </div>
-            ) : (
-              <div className={Style.audioCard_box_musicPlayer_icon}>
-                <TbPlayerPlay />
-              </div>
-            )}
+            <div className={Style.audioCard_box_musicPlayer_icon}>
+              {play ? <TbPlayerPause /> : <TbPlayerPlay />}
+            </div>
           </div>
         </div>
 
