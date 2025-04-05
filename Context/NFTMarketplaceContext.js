@@ -201,7 +201,8 @@ export const NFTMarketplaceProvider = ({ children }) => {
         const web3Modal = new Web3Modal();
         const connection = await web3Modal.connect();
         const provider = new ethers.providers.Web3Provider(connection);
-
+        const network = await provider.getNetwork();
+        console.log("Connected to network:", network);
         const contract = fetchContract(provider);
 
         const data = await contract.fetchMarketItems();
