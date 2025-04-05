@@ -23,33 +23,29 @@ const contactus = () => {
             <div className={Style.contactus_box_box_left_item}>
               <h3>🗺 ADDRESS</h3>
               <p>
-                Photo booth tattooed prism, portland taiyaki hoodie neutra
-                typewriter
+                Delhi Technological University, Shahbad Daulatpur, Main Bawana
               </p>
             </div>
             <div className={Style.contactus_box_box_left_item}>
               <h3>💌 EMAIL</h3>
-              <p>nc.example@example.com</p>
+              <p>ekanshbhushan@gmail.com</p>
             </div>
             <div className={Style.contactus_box_box_left_item}>
               <h3>☎ PHONE</h3>
-              <p>000-123-456-7890</p>
+              <p>+91 9643XXXXXX</p>
             </div>
             <div className={Style.contactus_box_box_left_item}>
               <h3>🌏 SOCIALS</h3>
-              <a href="#">
-                <TiSocialFacebook />
-              </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/ekansh-bhushan/">
                 <TiSocialLinkedin />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/ekansh__bhushan/">
                 <TiSocialInstagram />
               </a>
-              <a href="#">
+              <a href="https://www.youtube.com/@ekansh4518">
                 <TiSocialYoutube />
               </a>
-              <a href="#">
+              <a href="https://x.com/ekanshbhushan">
                 <TiSocialTwitter />
               </a>
             </div>
@@ -60,7 +56,7 @@ const contactus = () => {
                 <label htmlFor="name">Full Name</label>
                 <input
                   type="text"
-                  placeholder="shoaib bhai"
+                  placeholder="Name"
                   className={formStyle.Form_box_input_userName}
                 />
               </div>
@@ -80,7 +76,7 @@ const contactus = () => {
                   id=""
                   cols="30"
                   rows="6"
-                  placeholder="something about yourself in few words"
+                  placeholder="What's on your mind?"
                 ></textarea>
               </div>
               <Button
