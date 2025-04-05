@@ -1,24 +1,30 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { DiJqueryLogo } from "react-icons/di";
-//----IMPORT ICON
 import { MdNotifications } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
-import { CgMenuLeft, CgMenuRight } from "react-icons/cg";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { CgMenuRight } from "react-icons/cg";
 
-//INTERNAL IMPORT
+// INTERNAL IMPORT
 import Style from "./NavBar.module.css";
-import { Discover, HelpCenter, Notification, Profile, SideBar } from "./index";
+import {
+  Discover,
+  HelpCenter,
+  Notification,
+  Profile,
+  SideBar,
+  AIMentor,
+} from "./index";
 import { Button, Error } from "../componentsindex";
 import images from "../../img";
 
-//IMPORT FROM SMART CONTRACT
+// SMART CONTRACT CONTEXT
 import { NFTMarketplaceContext } from "../../Context/NFTMarketplaceContext";
 
 const NavBar = () => {
-  //----USESTATE COMPONNTS
+  // Menu toggle states
+  const [aiMentor, setAiMentor] = useState(false);
   const [discover, setDiscover] = useState(false);
   const [help, setHelp] = useState(false);
   const [notification, setNotification] = useState(false);
@@ -27,64 +33,51 @@ const NavBar = () => {
 
   const router = useRouter();
 
-  const openMenu = (e) => {
-    const btnText = e.target.innerText;
-    if (btnText == "Discover") {
-      setDiscover(true);
-      setHelp(false);
-      setNotification(false);
-      setProfile(false);
-    } else if (btnText == "Help Center") {
-      setDiscover(false);
-      setHelp(true);
-      setNotification(false);
-      setProfile(false);
-    } else {
-      setDiscover(false);
-      setHelp(false);
-      setNotification(false);
-      setProfile(false);
-    }
-  };
-
-  const openNotification = () => {
-    if (!notification) {
-      setNotification(true);
-      setDiscover(false);
-      setHelp(false);
-      setProfile(false);
-    } else {
-      setNotification(false);
-    }
-  };
-
-  const openProfile = () => {
-    if (!profile) {
-      setProfile(true);
-      setHelp(false);
-      setDiscover(false);
-      setNotification(false);
-    } else {
-      setProfile(false);
-    }
-  };
-
-  const openSideBar = () => {
-    if (!openSideMenu) {
-      setOpenSideMenu(true);
-    } else {
-      setOpenSideMenu(false);
-    }
-  };
-
-  //SMART CONTRACT SECTION
+  // Smart contract context
   const { currentAccount, connectWallet, openError } = useContext(
     NFTMarketplaceContext
   );
 
+  // Handlers
+  const openMenu = (e) => {
+    const btnText = e.target.innerText;
+    setDiscover(btnText === "Discover");
+    setHelp(btnText === "Help Center");
+    setAiMentor(false);
+    setNotification(false);
+    setProfile(false);
+  };
+
+  const openAIMentor = () => {
+    setAiMentor((prev) => !prev);
+    setDiscover(false);
+    setHelp(false);
+    setNotification(false);
+    setProfile(false);
+  };
+
+  const openNotification = () => {
+    setNotification(!notification);
+    setDiscover(false);
+    setHelp(false);
+    setProfile(false);
+    setAiMentor(false);
+  };
+
+  const openProfile = () => {
+    setProfile(!profile);
+    setDiscover(false);
+    setHelp(false);
+    setNotification(false);
+    setAiMentor(false);
+  };
+
+  const openSideBar = () => setOpenSideMenu(!openSideMenu);
+
   return (
     <div className={Style.navbar}>
       <div className={Style.navbar_container}>
+        {/* LEFT SECTION */}
         <div className={Style.navbar_container_left}>
           <div className={Style.logo}>
             <DiJqueryLogo onClick={() => router.push("/")} />
@@ -92,15 +85,25 @@ const NavBar = () => {
           <div className={Style.navbar_container_left_box_input}>
             <div className={Style.navbar_container_left_box_input_box}>
               <input type="text" placeholder="Search NFT" />
-              <BsSearch onClick={() => {}} className={Style.search_icon} />
+              <BsSearch className={Style.search_icon} />
             </div>
           </div>
         </div>
 
-        {/* //END OF LEFT SECTION */}
+        {/* RIGHT SECTION */}
         <div className={Style.navbar_container_right}>
+          {/* AIMentor Button */}
+          <div className={Style.navbar_container_right_mentor}>
+            <p onClick={openAIMentor}>🤖 AIMentor</p>
+            {aiMentor && (
+              <div className={Style.navbar_container_right_mentor_box}>
+                <AIMentor />
+              </div>
+            )}
+          </div>
+
+          {/* Discover */}
           <div className={Style.navbar_container_right_discover}>
-            {/* DISCOVER MENU */}
             <p onClick={(e) => openMenu(e)}>Discover</p>
             {discover && (
               <div className={Style.navbar_container_right_discover_box}>
@@ -109,7 +112,7 @@ const NavBar = () => {
             )}
           </div>
 
-          {/* HELP CENTER MENU */}
+          {/* Help Center */}
           <div className={Style.navbar_container_right_help}>
             <p onClick={(e) => openMenu(e)}>Help Center</p>
             {help && (
@@ -119,19 +122,19 @@ const NavBar = () => {
             )}
           </div>
 
-          {/* NOTIFICATION */}
+          {/* Notifications */}
           <div className={Style.navbar_container_right_notify}>
             <MdNotifications
               className={Style.notify}
-              onClick={() => openNotification()}
+              onClick={openNotification}
             />
             {notification && <Notification />}
           </div>
 
-          {/* CREATE BUTTON SECTION */}
+          {/* Wallet / Create Button */}
           <div className={Style.navbar_container_right_button}>
-            {currentAccount == "" ? (
-              <Button btnName="Connect" handleClick={() => connectWallet()} />
+            {currentAccount === "" ? (
+              <Button btnName="Connect" handleClick={connectWallet} />
             ) : (
               <Button
                 btnName="Create"
@@ -140,8 +143,7 @@ const NavBar = () => {
             )}
           </div>
 
-          {/* USER PROFILE */}
-
+          {/* Profile */}
           <div className={Style.navbar_container_right_profile_box}>
             <div className={Style.navbar_container_right_profile}>
               <Image
@@ -149,26 +151,24 @@ const NavBar = () => {
                 alt="Profile"
                 width={40}
                 height={40}
-                onClick={() => openProfile()}
+                onClick={openProfile}
                 className={Style.navbar_container_right_profile}
               />
-
               {profile && <Profile currentAccount={currentAccount} />}
             </div>
           </div>
 
-          {/* MENU BUTTON */}
-
+          {/* Side Menu Button */}
           <div className={Style.navbar_container_right_menuBtn}>
             <CgMenuRight
               className={Style.menuIcon}
-              onClick={() => openSideBar()}
+              onClick={openSideBar}
             />
           </div>
         </div>
       </div>
 
-      {/* SIDBAR CPMPONE/NT */}
+      {/* Sidebar */}
       {openSideMenu && (
         <div className={Style.sideBar}>
           <SideBar
@@ -179,6 +179,7 @@ const NavBar = () => {
         </div>
       )}
 
+      {/* Error Handler */}
       {openError && <Error />}
     </div>
   );
