@@ -68,6 +68,10 @@ npm run dev
 
 ```
 
+
+![Image](https://github.com/user-attachments/assets/2dc93660-064e-441b-8838-ff4e2baf7663)
+
+![Image](https://github.com/user-attachments/assets/2ab2808b-5f62-447f-97f1-de6d3785df6d)
 ## 🤝 Contributing
 
 Contributions are welcome!  
