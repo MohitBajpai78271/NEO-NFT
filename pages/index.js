@@ -16,7 +16,6 @@ import {
   FollowerTab,
   Slider,
   Brand,
-  Video,
   Loader,
 } from "../components/componentsindex";
 import { getTopCreators } from "../TopCreators/TopCreators";
@@ -56,11 +55,11 @@ const Home = () => {
       <HeroSection />
       <Service />
       <BigNFTSilder />
-      <Title
+      {/* <Title
         heading="Audio Collection"
         paragraph="Discover the most outstanding NFTs in all topics of life."
-      />
-      <AudioLive />
+      /> */}
+      {/* <AudioLive /> */}
       {creators.length == 0 ? (
         <Loader />
       ) : (
@@ -81,9 +80,8 @@ const Home = () => {
         paragraph="Explore the NFTs in the most featured categories."
       />
       <Category />
-      <Subscribe />
+      
       <Brand />
-      <Video />
     </div>
   );
 };

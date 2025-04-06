@@ -9,6 +9,10 @@ import {
 import Style from "./FollowerTab.module.css";
 import FollowerTabCard from "./FollowerTabCard/FollowerTabCard";
 import images from "../../img";
+import mohit from "../../img/mohit.jpg";
+import faeez from "../../img/faeez.jpg";
+import krish from "../../img/krish.jpg";
+import ekansh from "../../img/ekansh.png";
 
 const FollowerTab = ({ TopCreator }) => {
   // const CardArray = [
@@ -47,75 +51,75 @@ const FollowerTab = ({ TopCreator }) => {
   // ];
   const FollowingArray = [
     {
-      background: images.creatorbackground3,
-      user: images.user3,
+      background: images.krish,
+      user: images.krish,
       seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
     {
-      background: images.creatorbackground4,
-      user: images.user4,
+      background: images.ekansh,
+      user: images.ekansh,
       seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
     {
       background: images.creatorbackground5,
-      user: images.user5,
+      user: images.mohit,
       seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
     {
       background: images.creatorbackground6,
-      user: images.user6,
+      user: images.faeez,
       seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
     {
       background: images.creatorbackground1,
-      user: images.user1,
+      user: images.faeez,
       seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
     {
       background: images.creatorbackground2,
-      user: images.user2,
+      user: images.mohit,
       seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
   ];
   const NewsArray = [
     {
       background: images.creatorbackground1,
-      user: images.user1,
+      user: images.krish,
       seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
     {
       background: images.creatorbackground2,
-      user: images.user2,
+      user: images.ekansh,
       seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
     {
       background: images.creatorbackground3,
-      user: images.user3,
+      user: images.faeez,
       seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
     {
       background: images.creatorbackground4,
-      user: images.user4,
+      user: images.mohit,
       seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
     {
       background: images.creatorbackground5,
-      user: images.user5,
+      user: images.krish,
       seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
     {
       background: images.creatorbackground6,
-      user: images.user6,
+      user: images.faeez,
       seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
     {
       background: images.creatorbackground7,
-      user: images.user7,
+      user: images.mohit,
       seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
     {
       background: images.creatorbackground8,
-      user: images.user8,
+      user: images.krish,
       seller: "7200d8d8390d9993ujdc93900399djj277x",
     },
   ];

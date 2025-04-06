@@ -10,6 +10,7 @@ import Style from "./Collection.module.css";
 import DaysComponent from "./DaysComponents/DaysComponents";
 import images from "../../img";
 
+
 const Collection = () => {
   const [popular, setPopular] = useState(true);
   const [following, setFollowing] = useState(false);
