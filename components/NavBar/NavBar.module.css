@@ -184,3 +184,17 @@
         display: block;
     }
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.5rem; /* adds spacing between image and text */
+  }
+  
+  .logoText {
+    font-size: 2rem;
+    font-weight: 600;
+    color: white; /* or any color that suits your design */
+  }
+  

@@ -87,6 +87,7 @@ const NavBar = () => {
               height={50}
               className={Style.logoImage}
             />
+            <span className={Style.logoText}>NeoNFT</span>
           </div>
 
           <div className={Style.navbar_container_left_box_input}>
