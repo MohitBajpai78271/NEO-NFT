@@ -1,6 +1,7 @@
 # 🌀 NeoNFT - Decentralized NFT Marketplace with AI Assistant
 
 NeoNFT is a next-generation Web3-based NFT Marketplace that empowers users to mint, buy, sell, and trade NFTs securely on the Ethereum blockchain. Built using cutting-edge decentralized technologies and enhanced with AI-powered assistance, NeoNFT ensures a seamless, intelligent, and secure NFT experience.
+<img width="1440" alt="Image" src="https://github.com/user-attachments/assets/0cb82e48-31b9-439d-a680-7a4c9a7135c6" />
 
 ## 🚀 Features
 
