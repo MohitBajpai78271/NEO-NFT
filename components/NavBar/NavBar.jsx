@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { DiJqueryLogo } from "react-icons/di";
 import FinalLogo from "../../img/FinalLogo.png"
 import { MdNotifications } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";

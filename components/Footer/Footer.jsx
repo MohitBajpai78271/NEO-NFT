@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { DiJqueryLogo } from "react-icons/di";
 import {
   TiSocialFacebook,
   TiSocialLinkedin,
@@ -16,6 +15,7 @@ import { RiSendPlaneFill } from "react-icons/ri";
 import Style from "./Footer.module.css";
 import images from "../../img";
 import { Discover, HelpCenter } from "../NavBar/index";
+import FinalLogo from "../../img/FinalLogo.png";
 
 const Footer = () => {
   return (
@@ -24,7 +24,13 @@ const Footer = () => {
         <div className={Style.footer_box_social}>
           {/* <Image src={images.logo} alt="footer logo" height={100} width={100} /> */}
           <a href="/">
-            <DiJqueryLogo className={Style.footer_box_social_logo} />
+            <Image
+              src={FinalLogo}
+              alt="Final Logo"
+              width={80}
+              height={80}
+              className={Style.footer_box_social_logo}
+            />
           </a>
           <p>
             The world’s first and largest digital marketplace for crypto
