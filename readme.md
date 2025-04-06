@@ -26,6 +26,7 @@ NeoNFT is a next-generation Web3-based NFT Marketplace that empowers users to mi
 - Sleek and intuitive interface for all user levels  
 - Real-time updates and blockchain interaction feedback
 
+<img width="1239" alt="Image" src="https://github.com/user-attachments/assets/1ccc2a87-df1b-45bd-a28d-4c279bde6639" />
 
 ## TechStack
 - Smart Contracts: Solidity, Hardhat
