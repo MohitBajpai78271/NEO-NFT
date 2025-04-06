@@ -98,7 +98,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT, uploadToPinata }) => {
           </div>
 
           <p className={Style.upload_box_input_para}>
-            Ciscrypt will include a link to this URL on this item's detail page,
+            NeoNFT will include a link to this URL on this item's detail page,
             so that users can click to learn more about it. You are welcome to
             link to your own webpage with more details.
           </p>
@@ -164,7 +164,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT, uploadToPinata }) => {
               </div>
               <input
                 type="text"
-                placeholder="20%"
+                placeholder="XX%"
                 onChange={(e) => setRoyalties(e.target.value)}
               />
             </div>
@@ -177,7 +177,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT, uploadToPinata }) => {
               </div>
               <input
                 type="text"
-                placeholder="165MB"
+                placeholder="size here"
                 onChange={(e) => setFileSize(e.target.value)}
               />
             </div>
@@ -190,7 +190,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT, uploadToPinata }) => {
               </div>
               <input
                 type="text"
-                placeholder="Propertie"
+                placeholder="Propertie here"
                 onChange={(e) => setProperties(e.target.value)}
               />
             </div>
@@ -204,7 +204,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT, uploadToPinata }) => {
               </div>
               <input
                 type="text"
-                placeholder="Price"
+                placeholder="Price here"
                 onChange={(e) => setPrice(e.target.value)}
               />
             </div>

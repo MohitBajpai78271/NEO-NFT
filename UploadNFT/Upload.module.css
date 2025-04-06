@@ -27,8 +27,8 @@
 }
 
 .upload_box_slider_box_img_icon{
-    background-color: var(--icons-color);
-    color: var(--main-bg-color);
+    background-color: #37c9ce;
+    color: #111111;
     border-radius: 50%;
     display: grid;
     padding: .2rem;
@@ -55,7 +55,7 @@
 }
 
 .active{
-    background-color: var(--icons-color);
+    background-color: #37c9ce;
     color: var(--main-bg-color);
 }
 
