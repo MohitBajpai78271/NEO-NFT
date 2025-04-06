@@ -35,12 +35,7 @@ const Profile = ({ currentAccount }) => {
               <Link href={{ pathname: "/author" }}>My Profile</Link>
             </p>
           </div>
-          <div className={Style.profile_menu_one_item}>
-            <FaRegImage />
-            <p>
-              <Link href={{ pathname: "/author" }}>My Items</Link>
-            </p>
-          </div>
+
           <div className={Style.profile_menu_one_item}>
             <FaUserEdit />
             <p>
@@ -54,12 +49,6 @@ const Profile = ({ currentAccount }) => {
             <MdHelpCenter />
             <p>
               <Link href={{ pathname: "/contactus" }}>Help</Link>
-            </p>
-          </div>
-          <div className={Style.profile_menu_one_item}>
-            <TbDownload />
-            <p>
-              <Link href={{ pathname: "/aboutus" }}>About Us</Link>
             </p>
           </div>
         </div>
