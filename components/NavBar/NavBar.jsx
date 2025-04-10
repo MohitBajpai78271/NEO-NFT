@@ -102,7 +102,7 @@ const NavBar = () => {
         <div className={Style.navbar_container_right}>
           {/* AIMentor Button */}
           <div className={Style.navbar_container_right_mentor}>
-            <p onClick={openAIMentor}>BlockBuddy</p>
+            <p onClick={openAIMentor}>BlockBuddy AI</p>
             {aiMentor && (
               <div className={Style.navbar_container_right_mentor_box}>
                 <AIMentor />

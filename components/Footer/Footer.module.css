@@ -1,3 +1,9 @@
+.footer {
+    background-color: #1a1a1a; /* dark grayish-black */
+    padding: 4rem 0;
+    color: #fff; /* make sure text is readable */
+  }
+  
 
 .footer_box_social_logo{
     font-size: 5rem;

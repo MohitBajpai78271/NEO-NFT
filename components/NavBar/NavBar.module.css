@@ -121,6 +121,9 @@
 
 .navbar_container_right_menuBtn{
     display: none;
+} 
+.navbar_container_right_mentor{
+    cursor: pointer;
 }
 
 .menuIcon{

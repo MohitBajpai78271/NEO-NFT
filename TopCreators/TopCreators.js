@@ -1,11 +1,10 @@
-export const getTopCreators = (creators) => {
+export const getTopCreators = (creators=[]) => {
   const finalCreators = [];
 
   const finalResults = creators.reduce((index, currentValue) => {
     (index[currentValue.seller] = index[currentValue.seller] || []).push(
       currentValue
     );
-
     return index;
   }, {});
 

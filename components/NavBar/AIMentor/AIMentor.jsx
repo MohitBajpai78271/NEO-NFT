@@ -4,7 +4,7 @@ import styles from './AIMentor.module.css';
 
 const AIMentor = () => {
   const [messages, setMessages] = useState([
-    { from: 'bot', text: 'Hi! I’m your NFT AI Mentor 🤖. How can I help?' }
+    { from: 'bot', text: 'Hi! I’m your NFT AI Mentor 🤖. How can I help?'}
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -23,7 +23,7 @@ const AIMentor = () => {
         {
           model: 'gpt-3.5-turbo',
           messages: [
-            { role: 'system', content: 'You are an NFT mentor who helps users understand NFTs.' },
+            { role: 'system', content: 'You are an NFT mentor who helps users understand NFTs.'},
             ...newMessages.map((msg) => ({
               role: msg.from === 'user' ? 'user' : 'assistant',
               content: msg.text,
@@ -32,7 +32,7 @@ const AIMentor = () => {
         },
         {
           headers: {
-            Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
+            Authorization: `${process.env.REACT_APP_OPENAI_API_KEY}`,
             'Content-Type': 'application/json',
           },
         }
@@ -54,7 +54,7 @@ const AIMentor = () => {
 
   return (
     <div className={styles.chatContainer}>
-      <div className={styles.chatHeader}>BlockBuddy 💬</div>
+      <div className={styles.chatHeader}>BlockBuddy </div>
       <div className={styles.chatBody}>
         {messages.map((msg, idx) => (
           <div
